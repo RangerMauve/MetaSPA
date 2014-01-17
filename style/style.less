@@ -2,31 +2,59 @@
 @import '3L/3L';
 .normalize();
 
+@menuclosed:20px;
+@menuopen:200px;
+@bgc: #000;
+@fc: #FFF;
+
 html,body {
 	height: 100%;
 	.box-sizing(border-box);
 }
+// Main layout
 body {
 	font-family: "Courier New", Courier, monospace;
-	border: 1px solid black;
-	>* {
-		border: 1px solid black;
-	}
 	.display-flex();
 	.flex-direction(column);
 	.justify-content(flex-start);
+	margin-left:@menuclosed;
 	>main {
 		.flex(1);
 	}
 }
 
+body > menu {
+	.user-select(none);
+	.box-sizing(border-box);
+	text-align:center;
+	margin:0px;
+	padding:0px;
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:@menuclosed;
+	height:100%;
+	background:@bgc;
+	color: @fc;
+	.transition(width 0.3s ease-in-out);
+	>label{
+		display:block;
+		border:1px solid white;
+	}
+}
+body > menu.active {
+	width:@menuopen;
+}
+
+// Initialize Flexbo on relevant containers
 body > nav, main {
 	.display-flex();
 	.flex-direction(row);
 }
 
+// Tab content layout
 main {
-	background: #000;
+	background: @bgc;
 	.justify-content(space-between);
 	>section {
 		.flex(1);
@@ -37,6 +65,7 @@ main {
 	}
 }
 nav {
+	.user-select(none);
 	.justify-content(flex-start);
 	>label {
 		font-size: 0.7em;
