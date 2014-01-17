@@ -10,16 +10,18 @@
 		<label>M</label>
 	</menu>
 	<nav>
-		<label>Tab 1</label>
-		<label>Tab 2</label>
-		<label>Tab 3</label>
+		<label class="active" data-tab-id="t1">Tab 1</label>
+		<label data-tab-id="t2">Tab 2</label>
+		<label data-tab-id="t3">Tab 3</label>
 	</nav>
 	<main>
-		<section>Tab 1</section>
-		<section>Tab 2</section>
-		<section>Tab 3</section>
+		<section class="active" id="t1">Tab 1</section>
+		<section id="t2">Tab 2</section>
+		<section id="t3">Tab 3</section>
 	</main>
-	<footer>Footer</footer>
+	<footer>
+		<span class="tabInfo">Tab: t1</span>
+	</footer>
 	<script src="scripts/zepto.js"></script>
 	<script src="scripts/script.js"></script>
 </body>

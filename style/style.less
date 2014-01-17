@@ -40,6 +40,7 @@ body > menu {
 	>label{
 		display:block;
 		border:1px solid white;
+		margin:2px;
 	}
 }
 body > menu.active {
@@ -62,9 +63,12 @@ main {
 		background: #FFF;
 		margin: 4px;
 		padding:4px;
+		&.active {
+			background:#FEF;
+		}
 	}
 }
-nav {
+body > nav {
 	.user-select(none);
 	.justify-content(flex-start);
 	>label {
@@ -72,10 +76,19 @@ nav {
 		margin: 0px 4px;
 		margin-top:4px;
 		padding: 4px;
-		background: #EEE;
+		background: @bgc;
+		color: @fc;
+		&.active {
+			font-size:1.1em;
+		}
 	}
 	>label::after{
 		content: "x";
 		margin-left:4px;
 	}
+}
+body > footer {
+	background:@bgc;
+	color:@fc;
+	font-size: 0.7em;
 }

@@ -1,5 +1,10 @@
 $("menu label").click(function(){
-	var par = $(this).parent();
-	console.log(par);
-	par.toggleClass("active");
+	$(this).parent().toggleClass("active");
 });
+
+$("nav > label").click(function(){
+	$("nav > label, main > section").removeClass("active");
+	$(this).addClass("active");
+	$("#"+this.dataset.tabId).addClass("active");
+	$(".tabInfo").text("Tab: " + this.dataset.tabId);
+})
