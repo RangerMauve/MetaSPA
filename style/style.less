@@ -58,17 +58,26 @@ main {
 	background: @bgc;
 	.justify-content(space-between);
 	>section {
+		.box-sizing(border-box);
 		.flex(1);
 		.border-radius(10px);
 		background: #FFF;
 		margin: 4px;
 		padding:4px;
+		// Warning: Here be dragons
+		.transition(all 0.6s ease-in-out);
 		&.inactive {
-			display:none;
+			.flex(0 0px);
+			color: rgba(255,255,255,0);
+			margin: 4px 0;
+			padding:0;
 		}
 		&.active {
+			.flex(1);
 			background:#FEF;
-			display: block;
+			color: rgba(0,0,0,1);
+			margin: 4px;
+			padding:4px;
 		}
 	}
 }
