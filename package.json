@@ -1,0 +1,26 @@
+{
+  "name": "MetaSPA",
+  "version": "0.0.0",
+  "description": "An SPA for creating SPAs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RangerMauve/MetaSPA.git"
+  },
+  "keywords": [
+    "SPA",
+    "Offline",
+    "App",
+    "Tablet",
+    "Tool"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RangerMauve/MetaSPA/issues"
+  },
+  "homepage": "https://github.com/RangerMauve/MetaSPA"
+}

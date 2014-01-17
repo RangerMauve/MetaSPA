@@ -1,0 +1,52 @@
+// compress: false
+@import '3L/3L';
+.normalize();
+
+html,body {
+	height: 100%;
+	.box-sizing(border-box);
+}
+body {
+	font-family: "Courier New", Courier, monospace;
+	border: 1px solid black;
+	>* {
+		border: 1px solid black;
+	}
+	.display-flex();
+	.flex-direction(column);
+	.justify-content(flex-start);
+	>main {
+		.flex(1);
+	}
+}
+
+body > nav, main {
+	.display-flex();
+	.flex-direction(row);
+}
+
+main {
+	background: #000;
+	.justify-content(space-between);
+	>section {
+		.flex(1);
+		.border-radius(10px);
+		background: #FFF;
+		margin: 4px;
+		padding:4px;
+	}
+}
+nav {
+	.justify-content(flex-start);
+	>label {
+		font-size: 0.7em;
+		margin: 0px 4px;
+		margin-top:4px;
+		padding: 4px;
+		background: #EEE;
+	}
+	>label::after{
+		content: "x";
+		margin-left:4px;
+	}
+}
