@@ -236,11 +236,11 @@ main > section {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  background: #FFF;
+  background: #DDD;
   margin: 4px;
   padding: 4px;
-  -webkit-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s linear;
+  transition: all 0.6s linear;
 }
 main > section.inactive {
   -webkit-flex: 0 0px;
@@ -252,7 +252,7 @@ main > section.inactive {
 main > section.active {
   -webkit-flex: 1;
   flex: 1;
-  background: #FEF;
+  background: #FFF;
   color: #000000;
   margin: 4px;
   padding: 4px;
