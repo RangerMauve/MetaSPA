@@ -237,8 +237,12 @@ main > section {
   margin: 4px;
   padding: 4px;
 }
+main > section.inactive {
+  display: none;
+}
 main > section.active {
   background: #FEF;
+  display: block;
 }
 body > nav {
   -webkit-user-select: none;
@@ -264,6 +268,7 @@ body > nav > label::after {
   margin-left: 4px;
 }
 body > footer {
+  padding: 1px 30px;
   background: #000000;
   color: #ffffff;
   font-size: 0.7em;

@@ -63,8 +63,12 @@ main {
 		background: #FFF;
 		margin: 4px;
 		padding:4px;
+		&.inactive {
+			display:none;
+		}
 		&.active {
 			background:#FEF;
+			display: block;
 		}
 	}
 }
@@ -88,6 +92,7 @@ body > nav {
 	}
 }
 body > footer {
+	padding: 1px 30px;
 	background:@bgc;
 	color:@fc;
 	font-size: 0.7em;
