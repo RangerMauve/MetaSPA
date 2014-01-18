@@ -9,6 +9,7 @@ $("nav > label").click(function () {
 	$(".tabInfo").text("Tab: " + this.dataset.tabId);
 });
 
-CodeMirror.fromTextArea(document.querySelector("#t3 textarea"), {
-	mode: "text/javascript"
+var cm = CodeMirror.fromTextArea(document.querySelector("#t3 textarea"), {
+	mode: "text/javascript",
+	theme: "monokai"
 });
