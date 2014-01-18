@@ -228,6 +228,7 @@ main {
   justify-content: space-between;
 }
 main > section {
+  overflow: auto;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -256,6 +257,13 @@ main > section.active {
   color: #000000;
   margin: 4px;
   padding: 4px;
+}
+main > section .CodeMirror {
+  height: auto;
+}
+main > section .CodeMirror-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 body > nav {
   -webkit-user-select: none;

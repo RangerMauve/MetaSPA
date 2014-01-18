@@ -7,4 +7,8 @@ $("nav > label").click(function () {
 	$("#" + this.dataset.tabId).addClass("active");
 	$(this).addClass("active");
 	$(".tabInfo").text("Tab: " + this.dataset.tabId);
-})
+});
+
+CodeMirror.fromTextArea(document.querySelector("#t3 textarea"), {
+	mode: "text/javascript"
+});

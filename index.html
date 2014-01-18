@@ -3,6 +3,7 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/codemirror.css">
 </head>
 
 <body>
@@ -17,12 +18,22 @@
 	<main>
 		<section class="active" id="t1">Tab 1</section>
 		<section class="inactive" id="t2">Tab 2</section>
-		<section id="t3">Tab 3</section>
+		<section id="t3">
+			<textarea>
+$("nav > label").click(function () {
+	$("nav > label, main > section").removeClass("active");
+	$("#" + this.dataset.tabId).addClass("active");
+	$(this).addClass("active");
+	$(".tabInfo").text("Tab: " + this.dataset.tabId);
+});
+			</textarea>
+		</section>
 	</main>
 	<footer>
 		<span class="tabInfo">Tab: t1</span>
 	</footer>
 	<script src="scripts/zepto.js"></script>
+	<script src="scripts/codemirror.js"></script>
 	<script src="scripts/script.js"></script>
 </body>
 
