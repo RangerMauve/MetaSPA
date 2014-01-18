@@ -4,8 +4,13 @@
 
 @menuclosed:20px;
 @menuopen:200px;
-@bgc: #000;
-@fc: #FFF;
+@bgc: #272822;
+@bgc2: #75715e;
+@fc: #f8f8f2;
+@ac: #9effff;
+@ac2: #a6e22e;
+@ac3: #e6db74;
+@ac4: #f92672;
 
 html,body {
 	height: 100%;
@@ -35,6 +40,7 @@ body > menu {
 	width:@menuclosed;
 	height:100%;
 	background:@bgc;
+	border: 1px solid @ac3;
 	color: @fc;
 	.transition(width 0.3s ease-in-out);
 	>label{
@@ -61,22 +67,23 @@ main {
 		overflow:auto;
 		.box-sizing(border-box);
 		.flex(1);
-		.border-radius(10px);
-		background: #DDD;
+		border:1px solid @ac;
+		background: @bgc;
+		color:@fc;
 		margin: 4px;
 		padding:4px;
 		// Warning: Here be dragons
 		.transition(all 0.6s linear);
 		&.inactive {
 			.flex(0 0px);
-			color: rgba(255,255,255,0);
 			margin: 4px 0;
 			padding:0;
+			border-width:0px;
 		}
 		&.active {
+			border-color: @ac2;
+			border-width:2px;
 			.flex(1);
-			background:#FFF;
-			color: rgba(0,0,0,1);
 			margin: 4px;
 			padding:4px;
 		}
@@ -90,6 +97,7 @@ main {
 	}
 }
 body > nav {
+	background:@bgc2;
 	.user-select(none);
 	.justify-content(flex-start);
 	>label {
@@ -101,6 +109,7 @@ body > nav {
 		color: @fc;
 		&.active {
 			font-size:1.1em;
+			color: @ac4;
 		}
 	}
 	>label::after{
