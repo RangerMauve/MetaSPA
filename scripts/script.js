@@ -2,13 +2,6 @@ $("menu label").click(function () {
 	$(this).parent().toggleClass("active");
 });
 
-$("nav > label").click(function () {
-	$("nav > label, main > section").removeClass("active");
-	$("#" + this.dataset.tabId).addClass("active");
-	$(this).addClass("active");
-	$(".tabInfo").text("Tab: " + this.dataset.tabId);
-});
-
 var Packages = (function () {
 	var plugins = {}, libraries = {};
 
@@ -59,25 +52,22 @@ var Tabs = (function () {
 		dom.trigger("click");
 	}
 
-	function makeTab(source) {
+	function makeTab(source, label) {
 		var dom = $(source);
-		console.log("Made tab:", dom[0]);
 		$("main").append(dom);
 		dom.addClass("active");
 		return dom;
 	}
 
 	function open(name, data) {
-		console.log("Opening new", name, "tab.");
 		var type = types[name];
 
 		var id = document.querySelectorAll("main section").length + 1;
 		var content = ich[name](data);
 		var label = "<label data-tab-id=\"t" + id + "\">Tab" + id + " | " + name + "</label>";
 
-		makeLabel(label);
-		var tab = makeTab("<section id=\"t" + id + "\">\n" + content + "\n</section>");
-		type.init(tab, data);
+		var tab = makeTab("<section id=\"t" + id + "\">\n" + content + "\n</section>", makeLabel(label););
+		type.init(tab, data, label);
 		return tab;
 	}
 
@@ -90,9 +80,9 @@ var Tabs = (function () {
 })();
 
 Tabs.register({
-	name:"Text",
-	content:"{{source}}",
-	init: function(){}
+	name: "Text",
+	content: "{{source}}",
+	init: function () {}
 })
 
 Tabs.register({
@@ -111,8 +101,8 @@ Tabs.register({
 
 Tabs.open("JS", {
 	source: '$("nav > label").click(function () {\n$("nav > label, main > section").removeClass("active");\n$("#" + this.dataset.tabId).addClass("active");\n$(this).addClass("active");\n$(".tabInfo").text("Tab: " + this.dataset.tabId);\n});'
-}).addClass("pinned");
+});
 
-Tabs.open("Text",{source:"Test"});
-Tabs.open("Text",{source:"Test"});
-Tabs.open("Text",{source:"Test"});
+Tabs.open("Text", {source: "Test"});
+Tabs.open("Text", {source: "Test"});
+Tabs.open("Text", {source: "Test"});
