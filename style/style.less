@@ -71,24 +71,24 @@ main {
 		.flex(0 0px);
 		border:1px solid @ac;
 		background: @bgc;
-		color:@fc;
+		color:rgba(red(@fc),green(@fc),blue(@fc),0);
 		margin: 4px 0;
 		padding:0;
 		border-width:0px;
 		// Warning: Here be dragons
 		.transition(all 0.6s linear);
-		&.pinned {
-			border-width:1px;
+		&.pinned, &.active {
+			color:rgba(red(@fc),green(@fc),blue(@fc),1);
 			.flex(1);
 			margin: 4px;
 			padding:4px;
 		}
+		&.pinned {
+			border-width:1px;
+		}
 		&.active {
 			border-color: @ac2;
 			border-width:2px;
-			.flex(1);
-			margin: 4px;
-			padding:4px;
 		}
 		.CodeMirror {
 			height: auto;

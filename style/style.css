@@ -239,27 +239,27 @@ main > section {
   flex: 0 0px;
   border: 1px solid #9effff;
   background: #272822;
-  color: #f8f8f2;
+  color: rgba(248, 248, 242, 0);
   margin: 4px 0;
   padding: 0;
   border-width: 0px;
   -webkit-transition: all 0.6s linear;
   transition: all 0.6s linear;
 }
-main > section.pinned {
-  border-width: 1px;
+main > section.pinned,
+main > section.active {
+  color: #f8f8f2;
   -webkit-flex: 1;
   flex: 1;
   margin: 4px;
   padding: 4px;
 }
+main > section.pinned {
+  border-width: 1px;
+}
 main > section.active {
   border-color: #a6e22e;
   border-width: 2px;
-  -webkit-flex: 1;
-  flex: 1;
-  margin: 4px;
-  padding: 4px;
 }
 main > section .CodeMirror {
   height: auto;
