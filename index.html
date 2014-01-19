@@ -17,9 +17,9 @@
 		<label data-tab-id="t3">Tab 3</label>
 	</nav>
 	<main>
-		<section class="active" id="t1">Tab 1</section>
-		<section class="inactive" id="t2">Tab 2</section>
-		<section id="t3">
+		<section class="active pinned" id="t1">Tab 1</section>
+		<section id="t2">Tab 2</section>
+		<section class="pinned" id="t3">
 			<textarea>
 $("nav > label").click(function () {
 	$("nav > label, main > section").removeClass("active");
@@ -34,6 +34,7 @@ $("nav > label").click(function () {
 		<span class="tabInfo">Tab: t1</span>
 	</footer>
 	<script src="scripts/zepto.js"></script>
+	<script src="scripts/ICanHaz.js"></script>
 	<script src="scripts/codemirror.js"></script>
 	<script src="scripts/modes/javascript.js"></script>
 	<script src="scripts/script.js"></script>

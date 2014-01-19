@@ -68,19 +68,20 @@ main {
 	>section {
 		overflow:auto;
 		.box-sizing(border-box);
-		.flex(1);
+		.flex(0 0px);
 		border:1px solid @ac;
 		background: @bgc;
 		color:@fc;
-		margin: 4px;
-		padding:4px;
+		margin: 4px 0;
+		padding:0;
+		border-width:0px;
 		// Warning: Here be dragons
 		.transition(all 0.6s linear);
-		&.inactive {
-			.flex(0 0px);
-			margin: 4px 0;
-			padding:0;
-			border-width:0px;
+		&.pinned {
+			border-width:1px;
+			.flex(1);
+			margin: 4px;
+			padding:4px;
 		}
 		&.active {
 			border-color: @ac2;
