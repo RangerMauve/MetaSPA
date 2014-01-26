@@ -102,7 +102,7 @@ Tabs.register({
 	name: "Text",
 	content: "{{source}}",
 	init: function () {}
-})
+});
 
 // This is a Codemirror tab for editing javascript. You can specify the default script data
 Tabs.register({

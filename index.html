@@ -2,43 +2,18 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/codemirror.css">
 	<link rel="stylesheet" type="text/css" href="style/monokai.css">
-	<link rel="stylesheet/less" type="text/css" href="styles.less" />
-	 <script src="lessc/less-1.6.1.min.js" type="text/javascript"></script>
-	 <script type="text/javascript">less.watch();</script>
+	<link rel="stylesheet/less" type="text/css" href="style/style.less">
+	<script src="scripts/less.js" type="text/javascript"></script>
 </head>
 
 <body>
 	<menu>
 		<label>M</label>
 	</menu>
-<<<<<<< HEAD
-
-	<nav>
-		<label class="active" data-tab-id="t1">Tab 1</label>
-		<label data-tab-id="t2">Tab 2</label>
-		<label data-tab-id="t3">Tab 3</label>
-	</nav>
-	<main>
-		<section class="active" id="t1">Tab 1</section>
-		<section class="inactive" id="t2">Tab 2</section>
-		<section id="t3">
-			<textarea>
-$("nav > label").click(function () {
-	$("nav > label, main > section").removeClass("active");
-	$("#" + this.dataset.tabId).addClass("active");
-	$(this).addClass("active");
-	$(".tabInfo").text("Tab: " + this.dataset.tabId);
-});
-			</textarea>
-		</section>
-	</main>
-=======
 	<nav></nav>
 	<main></main>
->>>>>>> 97873c48a00c142e976a09a3c3ef84529bb18eac
 	<footer>
 		<span class="tabInfo">Tab: t1</span>
 	</footer>
