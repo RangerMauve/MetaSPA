@@ -70,7 +70,7 @@ main {
 	>section {
 		overflow:auto;
 		.box-sizing(border-box);
-		.flex(0 0px);
+		.flex(0);
 		border:1px solid @ac;
 		background: @bgc;
 		color:rgba(red(@fc),green(@fc),blue(@fc),0);
@@ -91,9 +91,6 @@ main {
 		&.active {
 			border-color: @ac2;
 			border-width:2px;
-			.flex(1);
-			margin: 4px;
-			padding:4px;
 		}
 		.CodeMirror {
 			height: auto;
