@@ -205,14 +205,13 @@ body > menu {
   background: #272822;
   border: 1px solid #e6db74;
   color: #f8f8f2;
-  border-radius: 10px 10px 0 0;
+  z-index: 1337;
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
 }
 body > menu > label {
   display: block;
   border: 1px solid white;
-  border-radius: 10px 10px 0 0;
   margin: 2px;
 }
 body > menu.active {
