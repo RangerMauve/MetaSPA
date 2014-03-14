@@ -202,10 +202,9 @@ body > menu {
   top: 0px;
   width: 20px;
   height: 100%;
-  background: #272822;
-  border: 1px solid #e6db74;
-  color: #f8f8f2;
-  z-index: 1337;
+  border: 1px solid black;
+  z-index: 10;
+  background: white;
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
 }
@@ -213,6 +212,18 @@ body > menu > label {
   display: block;
   border: 1px solid white;
   margin: 2px;
+}
+body > aside {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: none;
 }
 body > menu.active {
   width: 200px;
@@ -225,7 +236,6 @@ main {
   flex-direction: row;
 }
 main {
-  background: #272822;
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
@@ -235,9 +245,7 @@ main > section {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 20px;
-  border: 1px solid #9effff;
-  background: #272822;
-  color: rgba(248, 248, 242, 0);
+  border: 1px solid black;
   margin: 4px 0;
   padding: 0;
   -webkit-transition: all 0.6s linear;
@@ -245,7 +253,6 @@ main > section {
 }
 main > section.pinned,
 main > section.active {
-  color: #f8f8f2;
   -webkit-flex: 1;
   flex: 1;
   margin: 4px;
@@ -255,7 +262,6 @@ main > section.pinned {
   border-width: 1px;
 }
 main > section.active {
-  border-color: #a6e22e;
   border-width: 2px;
 }
 main > section .CodeMirror {
@@ -266,7 +272,7 @@ main > section .CodeMirror-scroll {
   overflow-x: auto;
 }
 body > nav {
-  background: #75715e;
+  background: white;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -279,13 +285,12 @@ body > nav > label {
   margin: 0px 4px;
   margin-top: 4px;
   padding: 4px;
-  background: #272822;
-  color: #f8f8f2;
   border-radius: 10px 10px 0 0;
+  border: 1px solid black;
+  border-bottom: 0;
 }
 body > nav > label.active {
   font-size: 1.1em;
-  color: #f92672;
 }
 body > nav > label::after {
   content: "x";
@@ -293,7 +298,5 @@ body > nav > label::after {
 }
 body > footer {
   padding: 1px 30px;
-  background: #272822;
-  color: #f8f8f2;
   font-size: 0.7em;
 }

@@ -23,16 +23,16 @@ Tabs.register({
 	}
 });
 
-Tabs.open("JS", {
-	source: '$("nav > label").click(function () {\n$("nav > label, main > section").removeClass("active");\n$("#" + this.dataset.tabId).addClass("active");\n$(this).addClass("active");\n$(".tabInfo").text("Tab: " + this.dataset.tabId);\n});'
+Tabs.register({
+	name:"PinnedJS",
+	content:Tabs.types.JS.content,
+	init: function(tab,data){
+		Tabs.types.JS.init.apply(this,arguments);
+		tab.append("<div>HELLO WORLD</div>");
+		tab.addClass("pinned");
+	}
 });
 
-Tabs.open("Text", {
-	source: "Test"
-});
-Tabs.open("Text", {
-	source: "Test"
-});
-Tabs.open("Text", {
-	source: "Test"
+Tabs.open("JS", {
+	source: '$("nav > label").click(function () {\n$("nav > label, main > section").removeClass("active");\n$("#" + this.dataset.tabId).addClass("active");\n$(this).addClass("active");\n$(".tabInfo").text("Tab: " + this.dataset.tabId);\n});'
 });
